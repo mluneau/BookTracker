@@ -1,12 +1,70 @@
-.navbar-lewagon {
+/* Mobile */
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar-mobile {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 4px 4px 14px rgba(0,0,0,0.1);
+}
+
+.navbar-item {
+  i {
+    font-size: 26px;
+  }
+}
+
+.navbar-container {
+  position: relative;
+  display: flex;
   justify-content: space-between;
-  background: white;
+
+  span {
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+/* Style the links inside the navigation bar */
+.navbar-mobile a {
+  display: block;
+  color: #D8D7DE;
+  text-align: center;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+
+  &:not(#center) {
+    width: 50%;
+    svg {
+      width: 30px;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: grey;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+#center {
+  position: absolute;
+  top: -23.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: $green;
+  border-radius: 50%;
+}
+
+
+/* Add a color to the active/current link */
+.navbar-mobile a.active {
+  color: $green;
 }
