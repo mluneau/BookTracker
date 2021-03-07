@@ -1,2 +1,26 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<div class="container mt-4">
+  <!-- browse buttons -->
+  <div class="d-flex justify-content-around">
+    <% unless @category == "all" %>
+      <%= link_to "All", books_path, class: 'btn btn-ghost' %>
+    <% end %>
+    <% ApplicationController::BOOK_CATEGORIES.each do |category| %>
+      <%= link_to category, books_path(category: category), class: "btn btn-ghost#{'-selected' if params[:category] == category}" %>
+    <% end %>
+  </div>
+  <h3 class="mt-4 mb-2 ml-3" id="index_title">Books</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <% @books.each do |book| %>
+          <div class="card-product mt-2" data-book-id="<%= book.id %>">
+            <div class="card-product-infos">
+              <h2><%= link_to book.title, book_path(book) %></h2>
+              <p><%= book.description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
