@@ -1,2 +1,13 @@
 <h1>Books#new</h1>
 <p>Find me in app/views/books/new.html.erb</p>
+
+<div class="container">
+  <%= simple_form_for @book, url: books_path do |f| %>
+    <%= f.input :title %>
+    <%= f.input :author %>
+    <%= f.input :description %>
+    <%= f.input :category, collection: ApplicationController::BOOK_CATEGORIES %>
+    <%= f.input :language, collection: ApplicationController::LANGUAGES %>
+    <%= f.submit %>
+  <% end %>
+</div>
