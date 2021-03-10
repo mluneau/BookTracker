@@ -1,2 +1,18 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="container mx-20 mt-4">
+
+  <div class="d-flex justify-content-around" >
+    <div class="mr-4">
+      <h2 class="mt-1"><%= @book.title %>  </h2>
+      
+        <div class="card-book-infos">
+          <div>
+            <p><strong>Author:</strong> <%= @book.author %></p>
+            <p><strong>Title:</strong> <%= @book.title %></p>
+            <p><strong>Description:</strong> <%= @book.description %></p>
+            <p><strong>Category</strong> <%= @book.category %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
