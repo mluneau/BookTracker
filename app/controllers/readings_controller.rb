@@ -1,17 +1,25 @@
 class ReadingsController < ApplicationController
   before_action :find_book, only: [:new, :create]
-  before_action :find_reading, only: [:index, :show]
+  before_action :find_reading, only: [:show]
 
   def index
+    @readings = Reading.all
   end
 
   def show
   end
 
   def new
+    @reading = Reading.new
   end
 
   def create
+    @reading = reading.new(reading_params)
+    if @reading.save
+      redirect_to reading_path(@reading)
+    else
+      render :new
+    end
   end
 
   def update
