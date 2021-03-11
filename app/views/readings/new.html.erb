@@ -1,2 +1,11 @@
 <h1>Readings#new</h1>
 <p>Find me in app/views/readings/new.html.erb</p>
+
+<div class="d-flex justify-content-center mt-10">
+  <%= simple_form_for [@book, @reading] do |f| %>
+    <%= f.input :start_date, as: :hidden, input_html: {id: "range_start", style: "display: none;"} %>
+    <%= f.input :end_date, as: :hidden, input_html: {id: "range_end"}%>
+    <%= f.input :rating, as: range_start: 1, range_end: 10 %>
+    <%= f.submit  class: 'btn btn-primary' %>
+  <% end %>
+</div>
