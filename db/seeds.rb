@@ -10,10 +10,10 @@ puts "Running the seed... GO!"
 
 puts "Emptying Books..."
 Book.destroy_all
-puts "Emptying Readings..."
-Reading.destroy_all
 puts "Emptying Users..."
 User.destroy_all
+puts "Emptying Readings..."
+Reading.destroy_all
 
 puts "Creating Users"
 max_booktracker = User.create!(first_name: "Maxence", last_name: "Luneau", email: "maxence@booktracker.com", password: "password")
