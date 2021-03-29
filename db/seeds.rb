@@ -31,4 +31,7 @@ Reading.create!(start_date: "11/01/2021", end_date: "26/01/2021", rating: 8, sta
 Reading.create!(start_date: "26/01/2021", end_date: "19/02/2021", rating: 7, status: "finished", book_id: travel2.id, user_id: max_booktracker.id)
 Reading.create!(start_date: "02/02/2021", end_date: "23/01/2021", rating: 10, status: "finished", book_id: fantastic1.id, user_id: max_booktracker.id)
 
+puts "Need to add more to the seed"
+
 puts "Seeding finished!"
+
