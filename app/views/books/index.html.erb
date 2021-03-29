@@ -1,5 +1,9 @@
 <div class="container mt-4">
   <!-- browse buttons -->
+
+  <p>Add button for new book w/ link</p>
+  
+
   <div class="d-flex justify-content-around">
     <% unless @category == "all" %>
       <%= link_to "All", books_path, class: 'btn btn-ghost' %>
@@ -25,4 +29,5 @@
   </div>
 </div>
 <p>Made by mluneau</p>
+
 
